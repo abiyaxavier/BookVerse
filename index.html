@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Explorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="hero">
+  <h1>BookVerse</h1>
+  <p>Discover, compare, and explore books with smart insights</p>
+</div>
+<div class="controls">
+
+  <input 
+    type="text" 
+    id="search" 
+    placeholder="🔍 Search books..." 
+    onkeyup="searchBooks()"
+  >
+
+  <select id="genreFilter" onchange="applyFilters()">
+    <option value="all">All Genres</option>
+  </select>
+
+  <select id="ratingFilter" onchange="applyFilters()">
+    <option value="all">All Ratings</option>
+    <option value="4">4+ ⭐</option>
+    <option value="4.5">4.5+ ⭐</option>
+  </select>
+
+</div>
+
+  <h2>🔥 Top 10 Popular Books</h2>
+  <div id="top-books" class="section"></div>
+
+  <h2>💰 Best Value Books</h2>
+  <div id="value-books" class="section"></div>
+
+  <h2>📚 All Books</h2>
+  <div id="book-list" class="section"></div>
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span onclick="closeModal()" class="close">&times;</span>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

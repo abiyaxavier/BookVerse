@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f6f8;
+}
+
+/* HERO SECTION */
+.hero {
+  background: #1e88a8;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 40px;
+  letter-spacing: 2px;
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* SEARCH */
+.controls {
+  text-align: center;
+  margin: 20px;
+}
+
+#search {
+  width: 60%;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* GRID */
+#book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* CARD STYLE (Poster look) */
+.card {
+  background: #1e88a8;
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  min-height: 180px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+/* Hover */
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Title */
+.card h3 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+/* Text */
+.card p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* Decorative circle */
+.card::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  width: 100px;
+  height: 100px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+}
+h2 {
+  margin-left: 20px;
+  color: #333;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Different card colors */
+.card.blue { background: #1e88a8; }
+.card.green { background: #43a047; }
+.card.orange { background: #fb8c00; }
+
+.card {
+  color: white;
+  padding: 15px;
+  border-radius: 12px;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+.controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+}
+
+select {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background: white;
+  width: 50%;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.close {
+  float: right;
+  cursor: pointer;
+  font-size: 20px;
+}
